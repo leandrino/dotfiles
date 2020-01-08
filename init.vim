@@ -15,6 +15,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'arcticicestudio/nord-vim'
   Plug 'heavenshell/vim-jsdoc'
+  Plug 'tpope/vim-cucumber'
   " Plug 'Shougo/deoplete.nvim'
 
 " LANGUAGES
