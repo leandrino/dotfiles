@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/leandrino/.oh-my-zsh"
+export ZSH="/home/lalexandrino/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -97,8 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim"
-alias ccc="xclip -sel clip"
+# alias vim="nvim"
+alias ccc="xclip -sel clip | echo 'Copied buffer to system clipboard'"
 alias cct="tmux show-buffer | xclip -sel clip -i | echo 'Copied tmux buffer to system clipboard'"
 
 . $HOME/.asdf/asdf.sh
@@ -116,3 +116,5 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
