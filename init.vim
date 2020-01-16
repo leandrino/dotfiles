@@ -11,12 +11,11 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'diepm/vim-rest-console'
   Plug 'w0rp/ale'
   Plug 'roxma/nvim-yarp'
-  Plug 'Valloric/YouCompleteMe'
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'arcticicestudio/nord-vim'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'tpope/vim-cucumber'
-  " Plug 'Shougo/deoplete.nvim'
+  Plug 'jreybert/vimagit'
 
 " LANGUAGES
   Plug 'Quramy/tsuquyomi'
@@ -65,7 +64,8 @@ set ignorecase
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_powerline_fonts = 0
 
 " LINT
 let g:ale_fixers = {
@@ -99,6 +99,3 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 map <C-n> :NERDTreeToggle<CR>
-
-" DEOPLETE
-let g:deoplete#enable_at_startup = 1

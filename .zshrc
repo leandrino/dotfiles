@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias vim="nvim"
 alias ccc="xclip -sel clip | echo 'Copied buffer to system clipboard'"
 alias cct="tmux show-buffer | xclip -sel clip -i | echo 'Copied tmux buffer to system clipboard'"
+alias kts="tmux kill-session -t"
 
 . $HOME/.asdf/asdf.sh
 
