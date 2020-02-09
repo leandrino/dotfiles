@@ -63,14 +63,6 @@ syntax on
 " the plugins.
 let mapleader=","
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-source ~/.vim/vundles.vim
-endif
-au BufNewFile,BufRead *.vundle set filetype=vim
-
 " ================ Turn Off Swap Files ==============
 
 set noswapfile
@@ -118,8 +110,7 @@ set nofoldenable        "dont fold by default
 " ================ Completion =======================
 
 set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll
-thru matches
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
@@ -133,8 +124,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=8         "Start scrolling when we're 8 lines away
-from margins
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
@@ -148,8 +138,8 @@ set smartcase       " ...unless we type a capital
 " ================ Witespaces ========================
 
 set listchars+=tab:▸\ 
-set listchars+=trail:·
-set listchars+=space:·
+" set listchars+=trail:·
+" set listchars+=space:·
 set listchars+=eol:↴
 set listchars+=nbsp:_
 set list
