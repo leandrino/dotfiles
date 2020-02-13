@@ -22,6 +22,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " LANGUAGES
   Plug 'Quramy/tsuquyomi'
   Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'ekalinin/Dockerfile.vim'
@@ -44,9 +45,7 @@ set list
 " UI CONFIG
 set colorcolumn=80
 set cursorline
-set relativenumber
 set scrolloff=99
-set number
 set noshowmode
 set background=dark
 colorscheme nord
@@ -145,17 +144,13 @@ let g:airline_powerline_fonts = 0
 " LINT
 let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
-\   'typescript': ['prettier', 'tslint'],
+\   'typescript': ['prettier', 'eslint'],
 \   'css': ['prettier'],
 \}
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
+" let g:ale_typescript_standard_executable=1
 " let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
-
-" Start autocompletion after 4 chars
-let g:ycm_min_num_of_chars_for_completion = 4
-let g:ycm_min_num_identifier_candidate_chars = 4
-let g:ycm_enable_diagnostic_highlighting = 0
 
 " Don't show YCM's preview window [ I find it really annoying ]
 set completeopt-=preview
@@ -174,3 +169,11 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 map <C-n> :NERDTreeToggle<CR>
+
+" SET RELATIVE NUMBER
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
