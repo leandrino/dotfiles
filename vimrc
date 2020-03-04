@@ -53,6 +53,7 @@ endif
 " ================ General Config ====================
 
 set number                      "Line numbers are good
+set relativenumber              "Relative number sounds good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
@@ -68,12 +69,6 @@ set hidden
 
 "turn on syntax highlighting
 syntax on
-
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
-let mapleader=","
 
 " ================ Turn Off Swap Files ==============
 
@@ -136,7 +131,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set scrolloff=98         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
