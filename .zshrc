@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias vim="nvim"
+alias vim="nvim"
 alias ccc="xclip -sel clip | echo 'Copied buffer to system clipboard'"
 alias cct="tmux show-buffer | xclip -sel clip -i | echo 'Copied tmux buffer to system clipboard'"
 alias kts="tmux kill-session -t"
