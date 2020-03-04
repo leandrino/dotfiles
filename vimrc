@@ -1,6 +1,12 @@
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before plug starts loading all
+" the plugins.
+let mapleader=","
+
 call plug#begin('~/.local/share/nvim/plugged')
 
-  Plug 'vim-airline/vim-airline'
+  " TOOLS
   Plug 'editorconfig/editorconfig-vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
@@ -10,13 +16,19 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'diepm/vim-rest-console'
   Plug 'w0rp/ale'
   Plug 'roxma/nvim-yarp'
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'tpope/vim-cucumber'
   Plug 'jreybert/vimagit'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'itchyny/lightline.vim'
+  Plug 'mengelbrecht/lightline-bufferline'
+
+  " THEMES
+  Plug 'junegunn/seoul256.vim'
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'lifepillar/vim-solarized8'
 
   " LANGUAGES
   Plug 'Quramy/tsuquyomi'
