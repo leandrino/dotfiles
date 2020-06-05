@@ -29,6 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'junegunn/seoul256.vim'
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'lifepillar/vim-solarized8'
+  Plug 'joshdick/onedark.vim'
 
   " LANGUAGES
   Plug 'Quramy/tsuquyomi'
@@ -145,8 +146,8 @@ set smartcase       " ...unless we type a capital
 " ================ Witespaces ========================
 
 set listchars+=tab:▸\ 
-" set listchars+=trail:·
-" set listchars+=space:·
+set listchars+=trail:·
+set listchars+=space:·
 set listchars+=eol:↴
 set listchars+=nbsp:_
 set list

@@ -2,7 +2,7 @@ set termguicolors
 
 syntax on
 " set t_Co=256
-set background=light
+" set background=light
 set ts=2 sw=2 et
 
 set colorcolumn=80
@@ -14,6 +14,7 @@ set cursorline
 " let g:seoul256_background = 254
 " colo seoul256
 " colo PaperColor
-colo solarized8
+" colo solarized8
+colo onedark
 
 set lsp=22
