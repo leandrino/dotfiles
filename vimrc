@@ -24,6 +24,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'itchyny/lightline.vim'
   Plug 'mengelbrecht/lightline-bufferline'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
   " THEMES
   Plug 'junegunn/seoul256.vim'
@@ -35,8 +36,10 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Quramy/tsuquyomi'
   Plug 'leafgarland/typescript-vim'
   Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
+  Plug 'maxmellon/vim-jsx-pretty'
   Plug 'ekalinin/Dockerfile.vim'
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+  Plug 'sheerun/vim-polyglot'
   Plug 'hashivim/vim-terraform'
   Plug 'juliosueiras/vim-terraform-completion'
 
@@ -142,6 +145,7 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+nnoremap <leader><space> :nohlsearch<cr>
 
 " ================ Witespaces ========================
 
@@ -150,7 +154,7 @@ set listchars+=trail:·
 set listchars+=space:·
 set listchars+=eol:↴
 set listchars+=nbsp:_
-set list
+nnoremap <leader>l :set list!<cr>
 
 " ================ Custom Settings ========================
 so ~/dotfiles/vim/settings.vim
