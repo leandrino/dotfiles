@@ -31,6 +31,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'lifepillar/vim-solarized8'
   Plug 'joshdick/onedark.vim'
+  Plug 'jacoborus/tender.vim'
 
   " LANGUAGES
   Plug 'Quramy/tsuquyomi'
