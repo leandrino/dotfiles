@@ -101,6 +101,7 @@ alias vim="nvim"
 alias ccc="xclip -sel clip | echo 'Copied buffer to system clipboard'"
 alias cct="tmux show-buffer | xclip -sel clip -i | echo 'Copied tmux buffer to system clipboard'"
 alias kts="tmux kill-session -t"
+alias gatlingt="~/Applications/gatling-charts-highcharts-bundle-3.3.1/bin/gatling.sh"
 
 . $HOME/.asdf/asdf.sh
 
